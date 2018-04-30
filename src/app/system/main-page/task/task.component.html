@@ -1,8 +1,21 @@
 <li class="list-group-item list-group-item-action flex-column">
   <div class="d-flex w-100 justify-content-between">
     <h5 >{{task.title}}</h5>
+    <small>{{task.priority}} priority</small>
     <small>{{task.date | date:"medium"}}</small>
   </div>
-  <small>{{task.priority}} priority</small>
-  <p >{{task.description}}</p>
+  <div class="row">
+    <div class="col-md-9"> {{task.description}}</div>
+    <div class="btn-group col-md-3" role="group" >
+      <button type="button" class="btn btn-outline-secondary btn-sm" (click)="checkTask()">
+        <i class="fas fa-check"></i>
+      </button>
+      <button type="button" class="btn btn-outline-secondary btn-sm" (click)="editTask()" >
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-outline-secondary btn-sm" (click)="deleteTask()">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
 </li>
