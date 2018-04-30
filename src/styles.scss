@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+$main_theme : #fff;
+$sidebar: #2b406f;
+$page: #b1c5ff;
+$header: #acacac;
+
+body{
+  background-color:$main_theme;
+}
+
+.header{
+  background-color: $header;
+}
+
+.sidebar{
+  color:#fff;
+  background-color:$sidebar;
+  .nav-link{
+    color: #fff;
+  }
+  a:hover{
+    color: #add0ff;
+  }
+  .nav-item.active{
+    background-color: #1f3858;
+  }
+}
+
+.page{
+  background-color:$page;
+}
+
+.list-group,.sidebar-header,.header{
+  padding: 10px;
+}
